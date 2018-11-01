@@ -4,10 +4,31 @@ My notes on doing a GenBank submission using tbl2asn for file handling.  A lot
 of the documentation still refers to Sequin and BankIt, but tbl2asn seems the
 preferred way now.
 
-Aside from the template, match the names of the different files so that only
-the extension differs, and store in one folder.
+## Overview
 
-## Template (sbt)
+Aside from the template, match the names of the different files so that only
+the extension differs, and store in one folder.  If everything is in one place
+it'd just be:
+
+    ./tbl2asn -t template.sbt -p .
+
+And then you have the output files for the submission.
+
+Running `make` will try to create an `example.sqn` using information from the
+[What is tbl2asn] page.
+
+[The tbl2asn quickstart section of the Handbook](https://www.ncbi.nlm.nih.gov/books/NBK53709/#gbankquickstart.Submission_using_tbl2asn)
+gives an email address or links to upload forms:
+[regular](https://www.ncbi.nlm.nih.gov/LargeDirSubs/dir_submit.cgi)
+on an old-school CGI page, or
+[genome upload](https://submit.ncbi.nlm.nih.gov/subs/genome/)
+on the recent Submisison Portal system like for SRA.  If I had to guess I
+expect they'll absorb more of this into the Submission Portal system
+(...someday).
+
+## Files Needed
+
+### Template (sbt)
 
 The template file has information about the submitter, sequence provider, and
 publication.  Always required.
@@ -20,7 +41,7 @@ NCBI submission pages I've seen, but instead of continuing through a whole
 interactive process it just provides a `template.sbt` file.  (The template is
 in [Abstrace Syntax Notation One].)
 
-## Sequence (fsa)
+### Sequence (fsa)
 
 The sequence file provides the sequence data in FASTA format with some
 specific requirements for the definition line.  Always required.
@@ -30,7 +51,7 @@ FASTA definition:
  * [Modifiers] encapsulated in square brackets as `[modifier=text]`, organism
    required (or given in tbl2asn command) and the rest optional
 
-## Feature Table (tbl)
+### Feature Table (tbl)
 
 The feature table is a tab-separated text file with a somewhat weird layout
 (compatible with TSV, just with empty cells, I think?  **verify this**  The
@@ -64,15 +85,15 @@ Rows:
 
 [Example Table and GenBank Record](https://www.ncbi.nlm.nih.gov/Sequin/table.html)
 
-## Quality Scores (qvl)
+### Quality Scores (qvl)
 
 Optional.
 
-## Source Table (src)
+### Source Table (src)
 
 Optional.
 
-## Protein Sequence (pep)
+### Protein Sequence (pep)
 
 Optional.
 
