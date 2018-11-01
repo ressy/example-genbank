@@ -19,9 +19,10 @@ version with `-V b`, so this might be better:
     ./tbl2asn -t template.sbt -p . -V vb
 
 Running `make` in this repository will try to create an `example.sqn` and
-associated validation and flatfile outputs using information from the
-[What is tbl2asn] page.  The example tbl file given is a bit garbled up in its
-tabs and spaces but it doesn't actually seem to matter to tbl2sqn.
+associated validation and flatfile outputs using the Sc 16 information from the
+[What is tbl2asn] page and the linked [Table Example].  The example tbl file
+given is a bit garbled up in its tabs and spaces but it doesn't actually seem
+to matter to tbl2sqn.
 
 The `example.gbf` flatfile will start off something like:
 
@@ -34,7 +35,8 @@ The `example.gbf` flatfile will start off something like:
     ...
 
 What you actually submit is the .sqn file.
-[The tbl2asn quickstart section of the Handbook](https://www.ncbi.nlm.nih.gov/books/NBK53709/#gbankquickstart.Submission_using_tbl2asn)
+[The tbl2asn quickstart section](https://www.ncbi.nlm.nih.gov/books/NBK53709/#gbankquickstart.Submission_using_tbl2asn)
+of the [GenBank Submissions Handbook]
 gives an email address or links to upload forms:
 [regular](https://www.ncbi.nlm.nih.gov/LargeDirSubs/dir_submit.cgi)
 on an old-school CGI page, or
@@ -117,11 +119,12 @@ Optional.
 
 Optional.
 
+[GenBank Submissions Handbook]: https://www.ncbi.nlm.nih.gov/books/NBK53709
 [GenBank Online Submission]: https://submit.ncbi.nlm.nih.gov/subs/genbank/
 [GenBank Submission Template]: https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
 [Modifiers]: https://www.ncbi.nlm.nih.gov/Sequin/modifiers.html
 [GenBank Features Reference]: http://www.insdc.org/documents/feature_table.html#7.2
 [Example GenBank Record]: https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html
-[GenBank Submissions Handbook]: https://www.ncbi.nlm.nih.gov/books/NBK53709
 [What is tbl2asn]: https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
+[Table Example]: https://www.ncbi.nlm.nih.gov/Sequin/table.html
 [Abstract Syntax Notation One]: https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
