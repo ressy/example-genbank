@@ -20,7 +20,8 @@ version with `-V b`, so this might be better:
 
 Running `make` in this repository will try to create an `example.sqn` and
 associated validation and flatfile outputs using information from the
-[What is tbl2asn] page.
+[What is tbl2asn] page.  The example tbl file given is a bit garbled up in its
+tabs and spaces but it doesn't actually seem to matter to tbl2sqn.
 
 The `example.gbf` flatfile will start off something like:
 
@@ -63,23 +64,26 @@ The sequence file provides the sequence data in FASTA format with some
 specific requirements for the definition line.  Always required.
 
 FASTA definition:
- * SeqID must be `[-_.:*#.A-Za-z0-9]+`
+ * SeqID must match the regex `[-_.:*#.A-Za-z0-9]+`
  * [Modifiers] encapsulated in square brackets as `[modifier=text]`, organism
    required (or given in tbl2asn command) and the rest optional
 
 ### Feature Table (tbl)
 
-The feature table is a tab-separated text file with a somewhat weird layout
-(compatible with TSV, just with empty cells, I think?  **verify this**  The
-row-by-row description implies the file should be "jagged", but possibly it'll
-accept square too).  Required if annotations are submitted (but the handbook
-elsewhere says "you must provide some type of annotation", so, always
-required?)
+The feature table is a tab-separated text file with a somewhat weird layout.
+The instructions describe it as having varying numbers of fields (i.e., tab
+characters) on different lines.  In my testing tbl2asn generates identical
+output when every line contains four tabs for the five possible fields, just
+leaving blanks as needed, so thankfully it seems to work using TSV
+spreadsheets.  `make example2/example2.sqn`
+
+Required if annotations are submitted (but the handbook elsewhere says "you
+must provide some type of annotation", so, always required?)
 
 Rows:
 
  1. SeqID: This should be the same SeqID as on the first line of the sequence
-    file. (1 column?)
+    file. (1 column)
  2. Feature: Defines a feature with Start, Stop, Feature, Modifier, Modifier
     cells (5 columns).
     1. Start: Integer position of start of feature, or "<1" for beyond the
