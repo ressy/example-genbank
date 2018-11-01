@@ -56,7 +56,7 @@ even though the [GenBank Submission Template] on the same server *is* used for
 generating templates used by tbl2asn.  That page looks a lot like the other
 NCBI submission pages I've seen, but instead of continuing through a whole
 interactive process it just provides a `template.sbt` file.  (The template is
-in [Abstrace Syntax Notation One].)
+in [Abstract Syntax Notation One].)
 
 ### Sequence (fsa)
 
