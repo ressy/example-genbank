@@ -77,7 +77,9 @@ The instructions describe it as having varying numbers of fields (i.e., tab
 characters) on different lines.  In my testing tbl2asn generates identical
 output when every line contains four tabs for the five possible fields, just
 leaving blanks as needed, so thankfully it seems to work using TSV
-spreadsheets.  `make example2/example2.sqn`
+spreadsheets.  `make example2/example2.sqn` will create an output file using
+this modified input tbl file, which should be identical to the output using the
+original tbl file.
 
 Required if annotations are submitted (but the handbook elsewhere says "you
 must provide some type of annotation", so, always required?)
