@@ -1,8 +1,8 @@
 # GenBank Submissions
 
-My notes on doing a GenBank submission using tbl2asn for file handling.  A lot
-of the documentation still refers to Sequin and BankIt, but tbl2asn seems the
-preferred way now.
+My notes on preparing a GenBank submission on Linux using tbl2asn for file
+handling.  A lot of the documentation still refers to Sequin and BankIt, but
+tbl2asn seems the preferred way now.
 
 ## Overview
 
@@ -12,11 +12,27 @@ it'd just be:
 
     ./tbl2asn -t template.sbt -p .
 
-And then you have the output files for the submission.
+And then you have the .sqn output file for the submission.  They recommend
+`-V v` for validation and you can get a for-your-information GenBank flatfile
+version with `-V b`, so this might be better:
 
-Running `make` will try to create an `example.sqn` using information from the
+    ./tbl2asn -t template.sbt -p . -V vb
+
+Running `make` in this repository will try to create an `example.sqn` and
+associated validation and flatfile outputs using information from the
 [What is tbl2asn] page.
 
+The `example.gbf` flatfile will start off something like:
+
+    LOCUS       Sc_16                    543 bp    DNA     linear   PLN 01-NOV-2018
+    DEFINITION  Saccharomyces cerevisiae.
+    ACCESSION
+    VERSION
+    KEYWORDS    .
+    SOURCE      Saccharomyces cerevisiae (baker's yeast)
+    ...
+
+What you actually submit is the .sqn file.
 [The tbl2asn quickstart section of the Handbook](https://www.ncbi.nlm.nih.gov/books/NBK53709/#gbankquickstart.Submission_using_tbl2asn)
 gives an email address or links to upload forms:
 [regular](https://www.ncbi.nlm.nih.gov/LargeDirSubs/dir_submit.cgi)
@@ -26,7 +42,7 @@ on the recent Submisison Portal system like for SRA.  If I had to guess I
 expect they'll absorb more of this into the Submission Portal system
 (...someday).
 
-## Files Needed
+## Input Files Needed
 
 ### Template (sbt)
 
