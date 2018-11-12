@@ -100,10 +100,9 @@ Rows:
     cells (5 columns).
     1. Start: Integer position of start of feature, or "<1" for beyond the
        given sequence at the 5' end.)
-    2. Stop:  Integer position of end of feature.  I think there's a notation
-       for beyond on the 3' end but I can't find the example for that.  Putting
-       a lower Start than Stop implies the feature is on the complementary
-       strand.
+    2. Stop:  Integer position of end of feature.  For beyond on the 3' end,
+       use ">N" where N is the last position.  Putting a lower Start than Stop
+       implies the feature is on the complementary strand.
     3. Feature: keyword for the feature type.  See the [GenBank Features
        Reference]) for the type of feature, like "CDS" for a coding sequence.
     4. **Modifier**?
