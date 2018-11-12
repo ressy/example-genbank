@@ -1,6 +1,6 @@
 # GenBank Submissions
 
-My notes on preparing a GenBank submission on Linux using tbl2asn for file
+My notes on preparing a GenBank submission on Linux using [tbl2asn] for file
 handling.  A lot of the documentation still refers to Sequin and BankIt, but
 tbl2asn seems the preferred way now.
 
@@ -20,7 +20,7 @@ version with `-V b`, so this might be better:
 
 Running `make` in this repository will try to create an `example.sqn` and
 associated validation and flatfile outputs using the Sc 16 information from the
-[What is tbl2asn] page and the linked [Table Example].  The example tbl file
+[tbl2asn] page and the linked [Table Example].  The example tbl file
 given is a bit garbled up in its tabs and spaces but it doesn't actually seem
 to matter to tbl2sqn.
 
@@ -70,6 +70,12 @@ FASTA definition:
  * [Modifiers] encapsulated in square brackets as `[modifier=text]`, organism
    required (or given in tbl2asn command) and the rest optional
 
+For more information on modifiers, see
+[here](https://www.ncbi.nlm.nih.gov/Sequin/sequin.hlp.html#ModifiersPage).
+Note that Country must match
+[this list](https://www.ncbi.nlm.nih.gov/genbank/collab/country/),
+and some of the other modifiers have a controlled format or vocabulary.
+
 ### Feature Table (tbl)
 
 The feature table is a tab-separated text file with a somewhat weird layout.
@@ -87,7 +93,9 @@ must provide some type of annotation", so, always required?)
 Rows:
 
  1. SeqID: This should be the same SeqID as on the first line of the sequence
-    file. (1 column)
+    file, but with "Feature " between the ">" and the SeqID.  So for the
+    example copied here, the feature table should start ">Feature Sc_16" whereas
+    the FASTA starts with ">Sc_16". (1 column)
  2. Feature: Defines a feature with Start, Stop, Feature, Modifier, Modifier
     cells (5 columns).
     1. Start: Integer position of start of feature, or "<1" for beyond the
@@ -127,7 +135,10 @@ Optional.
 [Modifiers]: https://www.ncbi.nlm.nih.gov/Sequin/modifiers.html
 [GenBank Features Reference]: http://www.insdc.org/documents/feature_table.html#7.2
 [Example GenBank Record]: https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html
-[What is tbl2asn]: https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
+[tbl2asn]: https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
 [Table Example]: https://www.ncbi.nlm.nih.gov/Sequin/table.html
 [Abstract Syntax Notation One]: https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
 [tbl2asn source]: https://www.ncbi.nlm.nih.gov/IEB/ToolBox/C_DOC/lxr/source/demo/tbl2asn.c
+
+
+TO ADD: https://www.ncbi.nlm.nih.gov/genbank/collab/country/
