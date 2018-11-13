@@ -128,6 +128,19 @@ Optional.
 
 Optional.
 
+## Tips and Tricks
+
+ * `tbl2asn -E T` will enable a recursive search within the directory given
+   with `-p`.  It still expects .fsa files with correspondingly-named .tbl
+   files, though.
+ * Before submitting, check the .val files and the discrepancy report if `-Z
+   file.txt` was given.  Nothing shows up on the standard error stream when
+   running the program even if major problems are logged to these text files!
+ * To get `/organlle="mitochondrion"` in the eventual GBF flat file, use
+   `[location=mitochondrion]` (or presumably whatever other location/organelle
+   you're using) as source modifier and tbl2asn will create the expected GBF
+   preview.
+
 [GenBank Submissions Handbook]: https://www.ncbi.nlm.nih.gov/books/NBK53709
 [GenBank Online Submission]: https://submit.ncbi.nlm.nih.gov/subs/genbank/
 [GenBank Submission Template]: https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
