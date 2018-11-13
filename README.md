@@ -138,6 +138,3 @@ Optional.
 [Table Example]: https://www.ncbi.nlm.nih.gov/Sequin/table.html
 [Abstract Syntax Notation One]: https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
 [tbl2asn source]: https://www.ncbi.nlm.nih.gov/IEB/ToolBox/C_DOC/lxr/source/demo/tbl2asn.c
-
-
-TO ADD: https://www.ncbi.nlm.nih.gov/genbank/collab/country/
