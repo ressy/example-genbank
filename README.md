@@ -133,6 +133,8 @@ Optional.
  * `tbl2asn -E T` will enable a recursive search within the directory given
    with `-p`.  It still expects .fsa files with correspondingly-named .tbl
    files, though.
+ * `tbl2asn -a s` will, in contrast to the recursive option for separate files,
+   allow multiple separate entries within a single .fsa/.tbl pair.
  * Before submitting, check the .val files and the discrepancy report if `-Z
    file.txt` was given.  Nothing shows up on the standard error stream when
    running the program even if major problems are logged to these text files!
