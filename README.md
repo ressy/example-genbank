@@ -1,8 +1,8 @@
 # GenBank Submissions
 
-My notes on preparing a GenBank submission on Linux using [tbl2asn] for file
-handling.  A lot of the documentation still refers to Sequin and BankIt, but
-tbl2asn seems the preferred way now.
+My notes on preparing a GenBank submission with annotations on Linux using
+[tbl2asn] for file handling.  A lot of the documentation still refers to
+Sequin and BankIt, but tbl2asn seems the preferred way now.
 
 ## Overview
 
