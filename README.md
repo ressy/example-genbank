@@ -1,8 +1,12 @@
 # GenBank Submissions
 
 My notes on preparing a GenBank submission with annotations on Linux using
-[tbl2asn] for file handling.  A lot of the documentation still refers to
-Sequin and BankIt, but tbl2asn seems the preferred way now.
+[tbl2asn] for file handling.
+
+**As of September 2019 BankIt/the submission portal seem to handle bulk uploads
+for multiple submission types with varying features and metadata FASTA and TSV
+(via the same odd features table format below) and that seems to be less hassle
+than the tbl2asn method here.**  I'd recommend that approach where possible.
 
 ## Overview
 
